@@ -1,7 +1,5 @@
 import os 
 import sys
-# sys.path.append(os.getcwd()[0:-7])
-# sys.path.append(os.path.join(os.getcwd()[0:-7], 'utils'))
 import pickle
 import numpy as np
 import pandas as pd
@@ -152,7 +150,7 @@ class dataset_video(Dataset):
 class dataset_video_inference(Dataset):
     def __init__(self, root_path, mode, clip_num, spatial_transform, temporal_transform):
         self.root_path = root_path
-        self.rgb_samples, self.depth_samples, self.labels = load_video_test(root_path, mode)
+        self.rgb_samples, self.depth_samples, self.labels = load_video(root_path, mode)
         rgb_test = Image.open(self.rgb_samples[0][0]).convert("RGB")
         self.sample_num = len(self.rgb_samples)
         self.spatial_transform = spatial_transform
