@@ -198,56 +198,6 @@ def make_temporal_pool(net, n_segment):
 
 
 
-if __name__ == '__main__':
-    # test inplace shift v.s. vanilla shift
-    tsm1 = TemporalShift(nn.Sequential(), n_segment=8, n_div=8, inplace=False)
-    tsm2 = TemporalShift(nn.Sequential(), n_segment=8, n_div=8, inplace=True)
-
-    print('=> Testing CPU...')
-    # test forward
-    with torch.no_grad():
-        for i in range(10):
-            x = torch.rand(2 * 8, 3, 224, 224)
-            y1 = tsm1(x)
-            y2 = tsm2(x)
-            assert torch.norm(y1 - y2).item() < 1e-5
-
-    # test backward
-    with torch.enable_grad():
-        for i in range(10):
-            x1 = torch.rand(2 * 8, 3, 224, 224)
-            x1.requires_grad_()
-            x2 = x1.clone()
-            y1 = tsm1(x1)
-            y2 = tsm2(x2)
-            grad1 = torch.autograd.grad((y1 ** 2).mean(), [x1])[0]
-            grad2 = torch.autograd.grad((y2 ** 2).mean(), [x2])[0]
-            assert torch.norm(grad1 - grad2).item() < 1e-5
-
-    print('=> Testing GPU...')
-    tsm1.cuda()
-    tsm2.cuda()
-    # test forward
-    with torch.no_grad():
-        for i in range(10):
-            x = torch.rand(2 * 8, 3, 224, 224).cuda()
-            y1 = tsm1(x)
-            y2 = tsm2(x)
-            assert torch.norm(y1 - y2).item() < 1e-5
-
-    # test backward
-    with torch.enable_grad():
-        for i in range(10):
-            x1 = torch.rand(2 * 8, 3, 224, 224).cuda()
-            x1.requires_grad_()
-            x2 = x1.clone()
-            y1 = tsm1(x1)
-            y2 = tsm2(x2)
-            grad1 = torch.autograd.grad((y1 ** 2).mean(), [x1])[0]
-            grad2 = torch.autograd.grad((y2 ** 2).mean(), [x2])[0]
-            assert torch.norm(grad1 - grad2).item() < 1e-5
-    print('Test passed.')
-
 
 
 
