@@ -53,4 +53,4 @@ sh train_ego_8f.sh 0,1,2,3 if you use four gpus
 Our codes are built based on previous repos [TSN](https://github.com/yjxiong/temporal-segment-networks), [TSM](https://github.com/mit-han-lab/temporal-shift-module) and [TEA](https://github.com/Phoenix1327/tea-action-recognition)
 
 ## Pretrained models
-Currently, we do not provide the pretrained models since we reconstruct the structure and rename our modules of ACTION for public release. It shoule be able to get the similar performance indicated in the paper using the codes provided above.
+Currently, we do not provide the pretrained models since we reconstruct the structure and rename our modules of ACTION for public release. It should be able to get the similar performance indicated in the paper using the codes provided above.
