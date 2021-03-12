@@ -37,3 +37,7 @@ Official implementation of ACTION-Net: Multipath Excitation for Action Recogniti
 |------000003.jpg
 ......
 ```
+## Todo
+* Upload sample annotation files
+* Add environments 
+* Add usage instruction
