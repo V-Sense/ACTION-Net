@@ -74,7 +74,7 @@ if args.dataset == 'EgoGesture':
     params['num_classes'] = 83
 elif args.dataset == 'jester':
     params['num_classes'] = 27
-elif args.dataset == 'sthv2' or args.dataset == 'sthv1':
+elif args.dataset == 'sthv2':
     params['num_classes'] = 174
 
 
@@ -310,7 +310,7 @@ def main():
                                 ToTorchFormatTensor(div=(args.base_model not in ['BNInception', 'InceptionV3'])),
                                 normalize
                                 ])
-        temporal_transform_train = Compose([
+        temporal_transform_train = torchvision.transforms.Compose([
                                             TemporalUniformCrop_train(args.clip_len)
                                             ])    
         trans_test  = torchvision.transforms.Compose([
@@ -320,7 +320,7 @@ def main():
                                 ToTorchFormatTensor(div=(args.base_model not in ['BNInception', 'InceptionV3'])),
                                 normalize
                                 ])
-        temporal_transform_test = Compose([
+        temporal_transform_test = torchvision.transforms.Compose([
                                             TemporalUniformCrop_val(args.clip_len)
                                         ])
     elif args.dataset == 'jester':
@@ -331,7 +331,7 @@ def main():
                                 ToTorchFormatTensor(div=(args.base_model not in ['BNInception', 'InceptionV3'])),
                                 normalize
                                 ])
-        temporal_transform_train = Compose([
+        temporal_transform_train = torchvision.transforms.Compose([
                                             TemporalUniformCrop_train(args.clip_len)
                                             ])    
         trans_test  = torchvision.transforms.Compose([
@@ -341,7 +341,7 @@ def main():
                                 ToTorchFormatTensor(div=(args.base_model not in ['BNInception', 'InceptionV3'])),
                                 normalize
                                 ])
-        temporal_transform_test = Compose([
+        temporal_transform_test = torchvision.transforms.Compose([
                                             TemporalUniformCrop_val(args.clip_len)
                                         ])
     
