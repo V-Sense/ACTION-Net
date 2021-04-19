@@ -72,7 +72,7 @@ If you find our work useful in your research, please cite:
 ```
 @InProceedings{Wang_2021_CVPR,
 author = {Wang, Zhengwei and She, Qi and Smolic, Aljosa},
-title = {ACTION-Net: Multipath Excitation for Action Recognition,
+title = {ACTION-Net: Multipath Excitation for Action Recognition},
 booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
 month = {June},
 year = {2021}
