@@ -60,3 +60,21 @@ Our codes are built based on previous repos [TSN](https://github.com/yjxiong/tem
 
 ## Pretrained models
 Currently, we do not provide the pretrained models since we reconstruct the structure and rename our modules of ACTION for public release. It should be able to get the similar performance indicated in the paper using the codes provided above.
+
+(Update) 
+
+[EgoGesture using 8f](https://www.dropbox.com/sh/v9373sopxmf3vwh/AACDx4E3exxR_gbHgFK7rsGXa?dl=0)
+
+[Jester using 8f](https://www.dropbox.com/sh/77d5qn31wxwpqw8/AAB-1JZVAb1MuQfnOaKtz4Lya?dl=0)
+
+## Citation
+If you find our work useful in your research, please cite:
+```
+@InProceedings{Wang_2021_CVPR,
+author = {Wang, Zhengwei and She, Qi and Smolic, Aljosa},
+title = {ACTION-Net: Multipath Excitation for Action Recognition,
+booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2021}
+}
+```
