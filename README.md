@@ -1,5 +1,9 @@
 # ACTION-Net
-Official implementation of ACTION-Net: Multipath Excitation for Action Recognition (CVPR'21).
+Official implementation of [ACTION-Net: Multipath Excitation for Action Recognition](https://arxiv.org/abs/2103.07372) (CVPR'21)
+
+By [Zhengwei Wang](https://villawang.github.io/), [Qi She](https://qi-she.net/) and [Aljosa Smolic](https://scholar.google.ch/citations?user=HZRejX4AAAAJ&hl=de)
+
+<p align="center"><img src="fig/heatmap_10_compressed.png" width="500" /></p>
 
 ## Getting Started
 * EgoGesture data folder structure
