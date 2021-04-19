@@ -3,6 +3,8 @@ Official implementation of [ACTION-Net: Multipath Excitation for Action Recognit
 
 By [Zhengwei Wang](https://villawang.github.io/), [Qi She](https://qi-she.net/) and [Aljosa Smolic](https://scholar.google.ch/citations?user=HZRejX4AAAAJ&hl=de)
 
+<p align="center"><img src="fig/backbone2.png" width="800" /></p>
+
 <p align="center"><img src="fig/heatmap_10_compressed.png" width="800" /></p>
 
 ## Getting Started
